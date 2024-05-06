@@ -12,6 +12,7 @@
 body{
   background-image: url('../public/img/bg1.jpg');
   background-size: cover;
+  background-attachment: fixed;
 }
 
 /* Define la animación de parpadeo */
