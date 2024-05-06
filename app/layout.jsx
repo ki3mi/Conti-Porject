@@ -14,7 +14,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <section className="text-black dark:text-white">
+        <div className="fixed w-full h-screen bg-black opacity-70 -z-10"></div>
+        <section className="dark:text-white">
           <NavBar/>
           {children}
           <Footer/>

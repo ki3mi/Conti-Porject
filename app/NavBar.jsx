@@ -26,17 +26,24 @@ export default function NavBar() {
     return (
         <>
             {/* Menu desktop */}
-            <div className='hidden md:flex fixed justify-between items-center w-full px-4 py-6'>
+            <div className='hidden md:flex fixed justify-between items-center w-full py-2 z-20 shadow-xl shadow-pink-800'>
+                {/* background Color */}
+                {/* <div className="absolute flex w-full justify-center">
+                    <div className="absolute flex w-[98%] h-[0.1rem] bg-white translate-y-[2.25rem] rounded-full"></div>
+                </div> */}
+                <div className="absolute flex w-full h-full bg-gray-900 opacity-90 blur-sm z-10">
+
+                </div>
                 {/* Logo */}
-                <div className="font-bold pl-6">
+                <div className="font-bold pl-6 z-20">
                     Logo
                 </div>
                 {/* Menu */}
-                <div className='flex'>
+                <div className='flex z-20'>
                     <Lista />
                 </div>
                 {/* User */}
-                <div className='font-bold pr-6'>
+                <div className='font-bold pr-6 z-20'>
                     Login
                 </div>
             </div>

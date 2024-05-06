@@ -9,6 +9,49 @@
 }
 
 body{
-  background: rgb(1,5,22);
-  background: linear-gradient(180deg, rgba(1,5,22,1) 0%, rgba(23,27,54,1) 100%);
+  background-image: url('../public/img/bg1.jpg');
+  background-size: cover;
+}
+
+/* Define la animación de parpadeo */
+@keyframes neon {
+  0% {
+    box-shadow: 0 0 20px 10px rgba(177, 44, 194, 0.8), 0 0 20px 10px rgba(255, 255, 255, 0.2); /* Color inicial */
+  }
+  10% {
+    box-shadow: 0 0 20px 10px rgba(68, 215, 235, 0.8), 0 0 20px 10px rgba(255, 255, 255, 0.2); /* Primer color */
+  }
+  20% {
+    box-shadow: 0 0 20px 10px rgba(50, 173, 112, 0.8), 0 0 20px 10px rgba(255, 255, 255, 0.2); /* Segundo color */
+  }
+  30% {
+    box-shadow: 0 0 20px 10px rgba(71, 44, 194, 0.8), 0 0 20px 10px rgba(255, 255, 255, 0.2); /* Tercer color */
+  }
+  40% {
+    box-shadow: 0 0 20px 10px rgba(235, 68, 68, 0.8), 0 0 20px 10px rgba(255, 255, 255, 0.2); /* Cuarto color */
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(177, 44, 194, 0.8), 0 0 20px 10px rgba(255, 255, 255, 0.2); /* Quinto color */
+  }
+  60% {
+    box-shadow: 0 0 20px 10px rgba(71, 44, 194, 0.8), 0 0 20px 10px rgba(255, 255, 255, 0.2); /* Sexto color */
+  }
+  70% {
+    box-shadow: 0 0 20px 10px rgba(68, 215, 235, 0.8), 0 0 20px 10px rgba(255, 255, 255, 0.2); /* Séptimo color */
+  }
+  80% {
+    box-shadow: 0 0 20px 10px rgba(68, 235, 163, 0.8), 0 0 20px 10px rgba(255, 255, 255, 0.2); /* Octavo color */
+  }
+  90% {
+    box-shadow: 0 0 20px 10px rgba(68, 163, 235, 0.8), 0 0 20px 10px rgba(255, 255, 255, 0.2); /* Noveno color */
+  }
+  100% {
+    box-shadow: 0 0 20px 10px rgba(68, 68, 235, 0.8), 0 0 20px 10px rgba(255, 255, 255, 0.2); /* Décimo color */
+  }
+}
+
+/* Aplica la animación a la sombra de tu navbar */
+.neon-shadow {
+  animation: neon 20s infinite; /* La animación se repite infinitamente en 10 segundos */
+  transition: box-shadow 1s ease-in-out; /* Transición suave entre los cambios de color */
 }

@@ -1,8 +1,8 @@
 export default function Footer(){
     return(
-        <>
-            <div className="flex justify-center w-full">                
-                <div className="w-[90%] h-1 bg-white rounded-full"></div>
+        <div className="flex flex-col w-full pt-10 rounded-t-3xl">
+            <div className="flex justify-center w-full shadow-lg shadow-cyan-100">                
+                <div className="w-[90%] h-1 bg-white rounded-full shadow-lg shadow-cyan-100"></div>
             </div>
             <div className="flex flex-col w-full justify-center items-center h-40">
                     {/* Linea */}
@@ -20,6 +20,6 @@ export default function Footer(){
                         </div>
                     </div>
             </div>        
-        </>
+        </div>
     )
 }
