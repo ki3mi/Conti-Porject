@@ -3,8 +3,8 @@ import Image from "next/image";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
-import Oferta from "./Components/Oferta";
-import { Linea } from "./Components/Visuales";
+import { Oferta } from "./Components/Products";
+import { Linea } from "./Components/Components";
 
 export default function Home() {
   useEffect(() => {
@@ -59,25 +59,25 @@ export default function Home() {
               src={'/img/intel.png'}
               width={1000}
               height={500}
-              className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105"
+              className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105 cursor-pointer"
             />
             <Image
               src={'/img/ryzen.png'}
               width={1000}
               height={500}
-              className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105"
+              className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105 cursor-pointer"
             />
             <Image
               src={'/img/radeon.png'}
               width={1000}
               height={500}
-              className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105"
+              className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105 cursor-pointer"
             />
             <Image
               src={'/img/nvidia.png'}
               width={1000}
               height={500}
-              className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105"
+              className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105 cursor-pointer"
             />
           </div>
         </div>
