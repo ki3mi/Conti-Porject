@@ -5,7 +5,7 @@ import 'aos/dist/aos.css'
 import { useEffect } from "react"
 import Link from "next/link"
 
-export default function Oferta() {
+export default function Oferta({link}) {
     useEffect(()=>{
         AOS.init({duration: 500})
     },[])
@@ -13,7 +13,7 @@ export default function Oferta() {
         <div className="flex flex-col justify-center items-center w-60 bg-zinc-900 rounded-xl" data-aos='zoom-in'>
             <div className="bg-white w-full p-4 rounded-t-xl">
                 <Image
-                    src={'/img/Pc.png'}
+                    src={link}
                     width={250}
                     height={250}
                 />

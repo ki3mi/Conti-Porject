@@ -1,7 +1,8 @@
 'use client'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
-import { useRouter } from "next/router"
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default function NavBar() {
     const [menu, setMenu] = useState(false)
@@ -12,6 +13,9 @@ export default function NavBar() {
             setMenu(true)
         }
     }
+    useEffect(() => {
+        AOS.init({duration: 500})
+    },[])
 
     const Lista = () => {
         const LinkStyle = 'py-4 md:px-6 transition ease-in-out delay-75 hover:[text-shadow:_6px_-1px_12px_rgb(157_23_77)] hover:scale-105 font-bold'
@@ -26,7 +30,7 @@ export default function NavBar() {
     return (
         <>
             {/* Menu desktop */}
-            <div className='hidden md:flex fixed justify-between items-center w-full py-2 z-40 bg-zinc-900 shadow-xl shadow-pink-800'>
+            <div className='hidden md:flex fixed justify-between items-center w-full py-2 z-40 bg-zinc-900 shadow-xl shadow-pink-800' data-aos='fade-down'>
                 {/* background Color */}
                 {/* <div className="absolute flex w-full justify-center">
                     <div className="absolute flex w-[98%] h-[0.1rem] bg-white translate-y-[2.25rem] rounded-full"></div>
