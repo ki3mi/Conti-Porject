@@ -114,7 +114,7 @@ export default function About() {
       <main className="flex justify-center items-center p-24">
         <div className="hidden lg:flex items-center w-1/2 rounded-full font-bold">
           <Image
-            src={'/img/omen.png'}
+            src={'/img/clove.png'}
             alt="Omen"
             width={1000}
             height={1000}
