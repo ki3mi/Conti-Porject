@@ -114,11 +114,11 @@ export default function About() {
       <main className="flex justify-center items-center p-24">
         <div className="hidden lg:flex items-center w-1/2 rounded-full font-bold">
           <Image
-            src={'/img/Omen.png'}
+            src={'/img/omen.png'}
             alt="Omen"
-            width={450}
-            height={450}
-            className="z-30 w-[450px] drop-shadow-lg shadow-cyan-200"
+            width={1000}
+            height={1000}
+            className='z-30 w-[45rem]'
             data-aos='zoom-in'
           />
         </div>
