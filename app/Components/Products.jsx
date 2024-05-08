@@ -21,7 +21,7 @@ export function Oferta({ link }) {
             <div className="flex flex-col justify-center items-center p-4">
                 <p className="font-bold">PC Gamer</p>
                 <p className="font-bold">20% de descuento</p>
-                <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p className="">Descripción del producto generico. Miss esto no es copia</p>
                 <Link href={'/Tienda'} className="py-2 px-6 bg-white text-black font-bold rounded-full hover:scale-105 mt-2">Comprar</Link>
             </div>
         </div>
@@ -54,7 +54,7 @@ export function Product({ link, title, price, discount }) {
             </div>
             <div className="flex flex-col justify-center items-center p-4">
                 <p className="font-bold">{title}</p>
-                <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p className="">Descripción del producto generico. Miss esto no es copia</p>
                 <div className="flex gap-6">
                     <del>S/.{price}</del><p className="font-bold">S/. {total}</p>
                 </div>
