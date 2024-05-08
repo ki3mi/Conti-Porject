@@ -18,49 +18,49 @@ export default function Store() {
     {
       id: 2,
       link: '/img/Pc.png',
-      title: 'Pc Gamer',
-      price: 2500,
-      discount: 10
+      title: 'Mouse Logitech',
+      price: 120,
+      discount: 20
     },
     {
       id: 3,
       link: '/img/Pc.png',
-      title: 'Pc Gamer',
-      price: 2500,
+      title: 'Teclado',
+      price: 200,
       discount: 10
     },
     {
       id: 4,
       link: '/img/Pc.png',
-      title: 'Pc Gamer',
-      price: 2500,
+      title: 'Monitor',
+      price: 600,
       discount: 10
     },
     {
       id: 5,
       link: '/img/Pc.png',
-      title: 'Pc Gamer',
-      price: 2500,
+      title: 'Cooler',
+      price: 150,
       discount: 10
     },
     {
       id: 6,
       link: '/img/Pc.png',
-      title: 'Pc Gamer',
-      price: 2500,
+      title: 'Case',
+      price: 250,
       discount: 10
     },
     {
       id: 7,
       link: '/img/Pc.png',
-      title: 'Pc Gamer',
-      price: 2500,
+      title: 'Procesador',
+      price: 1200,
       discount: 10
     },
     {
       id: 8,
       link: '/img/Pc.png',
-      title: 'Pc Gamer',
+      title: 'Gráfica',
       price: 2500,
       discount: 10
     },
