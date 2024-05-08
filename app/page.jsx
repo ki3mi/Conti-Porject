@@ -60,28 +60,28 @@ export default function Home() {
               width={1000}
               height={500}
               className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105 cursor-pointer"
-              onClick={()=>window.location.href ='https://www.intel.la/content/www/xl/es/homepage.html'}
+              onClick={()=>window.open('https://www.intel.la/content/www/xl/es/homepage.html')}
             />
             <Image
               src={'/img/ryzen.png'}
               width={1000}
               height={500}
               className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105 cursor-pointer"
-              onClick={()=> window.location.href ='https://www.amd.com/es/products/processors/desktops/ryzen.html'}
+              onClick={()=> window.open('https://www.amd.com/es/products/processors/desktops/ryzen.html')}
             />
             <Image
               src={'/img/radeon.png'}
               width={1000}
               height={500}
               className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105 cursor-pointer"
-              onClick={()=> window.location.href ='https://www.amd.com/es/graphics/radeon-rx-graphics'}
+              onClick={()=> window.open('https://www.amd.com/es/graphics/radeon-rx-graphics')}
             />
             <Image
               src={'/img/nvidia.png'}
               width={1000}
               height={500}
               className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105 cursor-pointer"
-              onClick={()=> window.location.href ='https://www.nvidia.com/es-la/'}
+              onClick={()=> window.open('https://www.nvidia.com/es-la/')}
             />
           </div>
         </div>
