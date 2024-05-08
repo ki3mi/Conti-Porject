@@ -55,29 +55,33 @@ export default function Home() {
           </div>
           <span className="w-full mt-6" data-aos='zoom-in'><Linea/></span>
           <div className="flex flex-wrap justify-center items-center gap-6 w-full h-fit mt-6 rounded-lg p-6" data-aos='zoom-in'>
-            <Image
+          <Image
               src={'/img/intel.png'}
               width={1000}
               height={500}
               className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105 cursor-pointer"
+              onClick={()=>window.location.href ='https://www.intel.la/content/www/xl/es/homepage.html'}
             />
             <Image
               src={'/img/ryzen.png'}
               width={1000}
               height={500}
               className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105 cursor-pointer"
+              onClick={()=> window.location.href ='https://www.amd.com/es/products/processors/desktops/ryzen.html'}
             />
             <Image
               src={'/img/radeon.png'}
               width={1000}
               height={500}
               className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105 cursor-pointer"
+              onClick={()=> window.location.href ='https://www.amd.com/es/graphics/radeon-rx-graphics'}
             />
             <Image
               src={'/img/nvidia.png'}
               width={1000}
               height={500}
               className="transition ease-in-out delay-100 w-40 grayscale-0 hover:grayscale hover:scale-105 cursor-pointer"
+              onClick={()=> window.location.href ='https://www.nvidia.com/es-la/'}
             />
           </div>
         </div>
