@@ -45,11 +45,11 @@ export function Product({ link, title, price, discount }) {
     return (
         <div className="flex flex-col justify-center items-center w-60 bg-zinc-900 rounded-xl" data-aos='zoom-in'>
             <div className="bg-white w-full p-4 rounded-t-xl">
-                <Image
+                <img
                     src={link}
                     width={250}
                     height={250}
-                    className="transition ease-in-out delay-150 hover:scale-105 cursor-pointer"
+                    className="transition ease-in-out delay-150 hover:scale-105 cursor-pointer h-60 object-cover"
                 />
             </div>
             <div className="flex flex-col justify-center items-center p-4">

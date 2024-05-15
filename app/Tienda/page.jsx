@@ -17,50 +17,50 @@ export default function Store() {
     },
     {
       id: 2,
-      link: '/img/Pc.png',
+      link: 'https://oechsle.vteximg.com.br/arquivos/ids/2763204-1000-1000/image-1201c922ae1049428a811bf61654a199.jpg?v=637495001493100000',
       title: 'Mouse Logitech',
       price: 120,
       discount: 20
     },
     {
       id: 3,
-      link: '/img/Pc.png',
+      link: 'https://www.infotec.com.pe/76851-large_default/teclado-gamer-redragon-kumara-k552-rgb-sp-led-rgb-usb-switch-blue-black.jpg',
       title: 'Teclado',
       price: 200,
       discount: 10
     },
     {
       id: 4,
-      link: '/img/Pc.png',
+      link: 'https://ae01.alicdn.com/kf/S8d99bda5430441bd8fd3468d20e9c0c18/Xiaomi-Monitor-de-juegos-Redmi-G24-23-8-pulgadas-165hz-frecuencia-de-actualizaci-n-respuesta-de.jpg',
       title: 'Monitor',
       price: 600,
       discount: 10
     },
     {
       id: 5,
-      link: '/img/Pc.png',
+      link: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0DgCSq5TZ8flBeEDGYz5xPKKHYVF2tnD0Sr63N8f9lQ&s',
       title: 'Cooler',
       price: 150,
       discount: 10
     },
     {
       id: 6,
-      link: '/img/Pc.png',
+      link: 'https://www.techpowerup.com/img/8Gpg4Jea6z5oMjMy.jpg',
       title: 'Case',
       price: 250,
       discount: 10
     },
     {
       id: 7,
-      link: '/img/Pc.png',
+      link: 'https://gamerbit.pe/wp-content/uploads/2022/09/AMD-Ryzen-5-7600X-5.3GHz.jpg',
       title: 'Procesador',
       price: 1200,
       discount: 10
     },
     {
       id: 8,
-      link: '/img/Pc.png',
-      title: 'Gráfica',
+      link: 'https://coolboxpe.vtexassets.com/arquivos/ids/347606/VD12GBRX7700XTG_1.jpg?v=638442175116070000',
+      title: 'Rx 7700 xt',
       price: 2500,
       discount: 10
     },
