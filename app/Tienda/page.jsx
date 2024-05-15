@@ -2,9 +2,10 @@
 import Image from "next/image";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CheckInput, RangeInput, SearchBar, TextLabel } from "../Components/Components";
 import { Product } from "../Components/Products";
+import PorductModal from "../Components/ProductModal";
 
 export default function Store() {
   const products = [
@@ -80,12 +81,31 @@ export default function Store() {
     }
   ]
 
+
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => {
+    setIsModalOpen(true)
+    console.log(isModalOpen);
+  }
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
+
   useEffect(() => {
     AOS.init({ duration: 500 })
   }, [])
   return (
     <>
-      <main className="flex flex-col gap-10 justify-center w-full h-fit items-center pt-24 pb-10 px-10">
+      <PorductModal isOpen={isModalOpen} onClose={closeModal}>
+        <Product 
+          link={'https://falabella.scene7.com/is/image/FalabellaPE/117040225_1?wid=800&hei=800&qlt=70'}
+          title={'Razer Viper Mini'}
+          price={200}
+          discount={10}
+        />
+      </PorductModal>
+      <div className="flex flex-col gap-10 justify-center w-full h-fit items-center pt-24 pb-10 px-10">
         {/* Título */}
         <p className="text-4xl font-bold">Tienda</p>
         {/* Sección de productos */}
@@ -111,6 +131,7 @@ export default function Store() {
           <div className="flex flex-col w-full md:w-2/3 xl:w-3/4">
             <div className="flex flex-col w-full">
               <p className="font-bold m-6">Tienda - Productos</p>
+              {/* <button className="py-2 px-6 bg-red-400 text-white rounded-full" onClick={openModal}>Abrir</button> */}
               <div className="flex justify-center w-full">
                 <div className="w-[80%]">
                   <SearchBar />
@@ -124,6 +145,7 @@ export default function Store() {
                     title={product.title}
                     price={product.price}
                     discount={product.discount}
+                    openModal={openModal}
                   />
                 ))}
               </div>
@@ -134,7 +156,7 @@ export default function Store() {
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }
