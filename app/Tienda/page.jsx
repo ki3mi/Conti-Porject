@@ -8,6 +8,8 @@ import { Product } from "../Components/Products";
 import PorductModal from "../Components/ProductModal";
 
 export default function Store() {
+
+
   const products = [
     {
       id: 1,
@@ -80,31 +82,38 @@ export default function Store() {
       discount: 10
     }
   ]
-
-
+  
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectProduct, setSelectProduct] = useState(null)
 
   const openModal = () => {
     setIsModalOpen(true)
-    console.log(isModalOpen);
   }
   const closeModal = () => {
     setIsModalOpen(false)
   }
 
+  const openProductModal = (data) => {
+    setSelectProduct(data)
+    openModal()
+  }
+  
   useEffect(() => {
     AOS.init({ duration: 500 })
   }, [])
   return (
     <>
-      <PorductModal isOpen={isModalOpen} onClose={closeModal}>
+    { isModalOpen && (
+      <PorductModal isOpen={isModalOpen} onClose={closeModal} >
+        {selectProduct && (
         <Product 
-          link={'https://falabella.scene7.com/is/image/FalabellaPE/117040225_1?wid=800&hei=800&qlt=70'}
-          title={'Razer Viper Mini'}
-          price={200}
-          discount={10}
-        />
+          link={selectProduct.link}
+          title={selectProduct.title}
+          price={selectProduct.price}
+          discount={selectProduct.discount}
+        />)}
       </PorductModal>
+    )}
       <div className="flex flex-col gap-10 justify-center w-full h-fit items-center pt-24 pb-10 px-10">
         {/* Título */}
         <p className="text-4xl font-bold">Tienda</p>
@@ -145,7 +154,7 @@ export default function Store() {
                     title={product.title}
                     price={product.price}
                     discount={product.discount}
-                    openModal={openModal}
+                    openModal={() => openProductModal(product)}
                   />
                 ))}
               </div>
