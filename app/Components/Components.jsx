@@ -44,10 +44,18 @@ export function CheckInput({text}){
     )
 }
 
-export function SearchBar(){
+export function SearchBar({searchQuery, onSearchChange}){
+    const handleChange = (e) => {
+        onSearchChange(e.target.value)
+    }
     return(
         <div className="relative w-full">
-            <input type="text" className='flex appearance-none w-full rounded-full px-6 py-1 text-white font-medium bg-transparent border-2 my-2 pl-10' placeholder="Buscar..."/>
+            <input 
+                type="text"
+                value={searchQuery}
+                className='flex appearance-none w-full rounded-full px-6 py-1 text-white font-medium bg-transparent border-2 my-2 pl-10' 
+                placeholder="Buscar..."
+                onChange={handleChange}/>
             <svg className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-500 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="11" cy="11" r="8" />
                 <line x1="21" y1="21" x2="16.65" y2="16.65" />

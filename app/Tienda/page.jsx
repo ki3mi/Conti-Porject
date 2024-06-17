@@ -83,8 +83,10 @@ export default function Store() {
     }
   ]
   
+  const [dataProducts, setDataProducts] = useState(products)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectProduct, setSelectProduct] = useState(null)
+  const [searchQuery, setSearchQuery] = useState('')
 
   const openModal = () => {
     setIsModalOpen(true)
@@ -97,6 +99,15 @@ export default function Store() {
     setSelectProduct(data)
     openModal()
   }
+  
+  const handleSearchChange = (query) => {
+    setSearchQuery(query)
+  }
+
+// No se comporta como un estado, solo se recalcula cuando product cambia
+  const filteredProducts = dataProducts.filter((product) =>
+    product.title.toLowerCase().includes(searchQuery.toLocaleLowerCase())
+  )
   
   useEffect(() => {
     AOS.init({ duration: 500 })
@@ -143,11 +154,11 @@ export default function Store() {
               {/* <button className="py-2 px-6 bg-red-400 text-white rounded-full" onClick={openModal}>Abrir</button> */}
               <div className="flex justify-center w-full">
                 <div className="w-[80%]">
-                  <SearchBar />
+                  <SearchBar searchQuery={searchQuery} onSearchChange={handleSearchChange}/>
                 </div>
               </div>
               <div className="flex flex-wrap justify-center gap-4 w-full my-6">
-                {products.map((product) => (
+                {filteredProducts.map((product) => (
                   <Product
                     key={product.id}
                     link={product.link}
